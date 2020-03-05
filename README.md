@@ -1,5 +1,5 @@
 # One
-New repo for stepik course, block 4. There is I will try PageObject in tests
+Репка для 4-го блока из курса на Stepik. Тут применяется Page Object pattern
 
 # Краткое содержание файлов и их взаимодействие
 
@@ -8,8 +8,9 @@ New repo for stepik course, block 4. There is I will try PageObject in tests
 	- base_page.py - хранятся методы, которые применяются ко всему проекту, завернуто в класс для удобства импортирования
 	- locators.py - хранятся локаторы для каждой отдельной страницы, завернуты в класс для удобства импортирования
 	- main_page.py - хранятся методы по "главной" странице сайта, обернуто в класс MainPage(BasePage) наследник класса BasePage, для возможности использования методов из BasePage
+	- login_page.py - аналогично main_page.py
 - проверки (тест-кейсы) лежат в корне (например, test_main_page.py):
 	1. взять нужный для проверки (тест-кейса) линк
 	2. создать в функции переменную page, которой передается браузер из base_page.py (класс BasePage) и линк
-	3. page.open() - открыть линк в браузере, методом '__init__' из base_page.py (класс BasePage)
-	4. добавить нужные проверки, которые созданы методами в, например, main_page, login_page
+	3. page.open() - открыть линк в браузере, методом `__init__` из base_page.py (класс BasePage)
+	4. добавить нужные проверки, которые созданы методами в, например, main_page.py, login_page.py
