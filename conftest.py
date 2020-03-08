@@ -18,8 +18,11 @@ def browser(request):
         print("\nstarting chrome browser for tests...\n")
         options = webdriver.ChromeOptions()
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-        options.add_argument("--start-maximized") 
-        browser = webdriver.Chrome(options=options)
+        #options.add_argument("--start-maximized")
+        #browser.maximize_window()
+        #options.add_argument('headless') запускает в фоне
+        options.add_argument('window-size=800x600') 
+        browser = webdriver.Chrome(options=options)        
     elif browser_name =='firefox':
         print("\nstarting firefox for test...\n")   
         browser = webdriver.Firefox()
